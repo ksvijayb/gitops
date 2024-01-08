@@ -1,0 +1,33 @@
+---
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: GitRepository
+metadata:
+  name: homelab
+  namespace: flux-system
+spec:
+  interval: 5m0s
+  url: https://github.com/ksvijayb/homelab.git
+  ref:
+    branch: lab
+  secretRef:
+    name: flux-system
+  ignore: |
+    .git
+    documents
+    scripts
+  recurseSubmodules: true
+  timeout: 15m0s
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: homelab
+  namespace: flux-system
+spec:
+  interval: 10m0s
+  sourceRef:
+    kind: GitRepository
+    name: homelab
+  path: ./project/homelab
+  prune: true
+  
