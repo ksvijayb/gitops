@@ -10,7 +10,7 @@ spec:
   ref:
     branch: lab
   secretRef:
-    name: flux-git-deploy
+    name: flux-system
   ignore: |
     .git
     documents
