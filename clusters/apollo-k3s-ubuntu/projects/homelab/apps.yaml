@@ -6,11 +6,11 @@ metadata:
   namespace: flux-system
 spec:
   interval: 5m0s
-  url: ssh://git@github.com/ksvijayb/homelab.git
+  url: https://github.com/ksvijayb/homelab.git
   ref:
     branch: lab
   secretRef:
-    name: flux-git-ssh
+    name: flux-system
   ignore: |
     .git
     documents
