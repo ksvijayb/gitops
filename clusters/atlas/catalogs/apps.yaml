@@ -1,0 +1,13 @@
+---
+apiVersion: source.toolkit.fluxcd.io/v1beta1
+kind: GitRepository
+metadata:
+  name: lab-apps-public
+  namespace: flux-system
+spec:
+  interval: 10m0s
+  url: ssh://git@github.com/ksvijayb/homelab
+  ref:
+    branch: master
+  secretRef:
+    name: flux-system
