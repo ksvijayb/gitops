@@ -8,7 +8,7 @@ spec:
   interval: 5m0s
   url: ssh://git@github.com/ksvijayb/homelab
   ref:
-    branch: lab
+    branch: atlas
   secretRef:
     name: flux-system
   ignore: |
