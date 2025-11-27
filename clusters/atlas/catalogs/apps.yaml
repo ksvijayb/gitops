@@ -6,7 +6,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 10m0s
-  url: ssh://git@github.com/ksvijayb/homelab-charts
+  url: https://github.com/ksvijayb/homelab-charts.git
   ref:
     branch: master
   secretRef:
