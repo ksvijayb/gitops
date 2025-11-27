@@ -6,7 +6,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 5m0s
-  url: ssh://git@github.com/ksvijayb/homelab
+  url: https://github.com/ksvijayb/homelab.git
   ref:
     branch: atlas
   secretRef:
