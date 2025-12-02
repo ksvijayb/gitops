@@ -10,5 +10,5 @@ spec:
   ref:
     branch: master
   secretRef:
-    name: flux-system
+    name: github-auth
 
